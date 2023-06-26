@@ -51,7 +51,7 @@ function App() {
 
   const handleFilter = (reg) => {
     const region = reg;
-    if (region === "All") {
+    if (region === "All" || region === "Todo") {
       setFilteredCountriesByKey(countries);
     } else {
       const filteredRegion = countries.filter((item) => item.region === region);

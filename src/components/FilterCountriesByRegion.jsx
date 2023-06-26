@@ -13,7 +13,7 @@ export function FilterCountriesByRegion({
 
   const [textTodos, setTextTodos] = useState("All");
 
-  const [textAfrica, setTextAfrica] = useState("Africa");
+  const [textAfrica, setTextAfrica] = useState("Africa" || "África");
 
   const [textAmerica, setTextAmerica] = useState("Americas");
 
