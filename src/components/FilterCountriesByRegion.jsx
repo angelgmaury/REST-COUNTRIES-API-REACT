@@ -13,7 +13,7 @@ export function FilterCountriesByRegion({
 
   const [textTodos, setTextTodos] = useState("All");
 
-  const [textAfrica, setTextAfrica] = useState("Africa" || "África");
+  const [textAfrica, setTextAfrica] = useState("Africa");
 
   const [textAmerica, setTextAmerica] = useState("Americas");
 
@@ -37,7 +37,7 @@ export function FilterCountriesByRegion({
 
   return (
     <div
-      className={`mt-12 mx-6 w-52 sombra tablet:mt-6 relative`}
+      className={`mt-12 mx-6 w-52 sombra tablet:mt-6 relative desktop:mx-10`}
       onClick={caretMode}
     >
       <div

@@ -50,10 +50,27 @@ function App() {
   }, []);
 
   const handleFilter = (reg) => {
-    const region = reg;
-    if (region === "All" || region === "Todo") {
+    let region = reg.toLowerCase();
+    if (region === "all" || region === "todos") {
       setFilteredCountriesByKey(countries);
     } else {
+      switch (reg) {
+        case "África":
+          region = "África";
+          break;
+        case "Américas":
+          region = "Americas";
+          break;
+        case "Europa":
+          region = "Europe";
+          break;
+        case "Oceanía":
+          region = "Oceania";
+          break;
+        default:
+          region = reg;
+          break;
+      }
       const filteredRegion = countries.filter((item) => item.region === region);
       setFilteredCountriesByKey(filteredRegion);
     }

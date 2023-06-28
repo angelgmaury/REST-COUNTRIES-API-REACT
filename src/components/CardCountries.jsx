@@ -25,7 +25,7 @@ export function CardCountries({
   return (
     <div>
       <div
-        className={`grid grid-cols-1 gap-10 mx-6 mt-6 tablet:grid-cols-2 justify-items-center desktop:grid-cols-4 mb-10 ${
+        className={`grid grid-cols-1 gap-10 mx-6 mt-6 tablet:grid-cols-2 tablet:mx-6 justify-items-center desktop:gap-20 desktop:grid-cols-4 mb-10 desktop:mx-10  ${
           isSelectCountry ? "hidden" : "grid"
         }`}
       >
@@ -34,11 +34,12 @@ export function CardCountries({
             key={index}
             className={`sombra flex flex-col ${
               isLightMode ? "bg-light-bgSecond" : "bg-dark-bgSecond"
-            } rounded-md max-w-[400px]`}
+            } rounded-md max-w-[400px] desktop:max-h-[500px]`}
           >
             <img
               src={country.flags.png}
               className="rounded-t-md rounded-r-md max-w-[400px] max-h-[250px]"
+              alt={`Flag of ${country.name.common}`}
             />
 
             <div className="p-6 mt-2">

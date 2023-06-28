@@ -18,17 +18,20 @@ export function CountriesForm({
       }`}
     >
       <div
-        className={`mt-6 mx-6 px-8 py-5 rounded-md sombra ${
+        className={`flex mt-6 mx-6 px-8 py-5 rounded-md sombra ${
           isLightMode ? "bg-light-bgSecond" : "bg-dark-bgSecond"
-        } transition-all tablet:w-[40%] desktop:w-[22.5%]`}
+        } transition-all tablet:w-[40%] desktop:w-[30%] desktop:mx-10`}
       >
-        <button
+        <p
           className={`mr-3.5 ${
             isLightMode ? "text-light-text" : "text-dark-text"
           }`}
         >
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
-        </button>
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            className="cursor-pointer"
+          />
+        </p>
         <input
           type="text"
           placeholder="Search for a country..."

@@ -72,10 +72,11 @@ export function CountrieInfo({ country, setSelectedCountry, isLightMode }) {
             <img
               src={country.flags.png}
               className="rounded-t-md rounded-l-md rounded-r-md max-h-[250px] laptop:w-[full]"
+              alt={`Flag of ${country.name.common}`}
             />
           </figure>
 
-          <div className="laptop:grid laptop:grid-cols-2">
+          <div className="laptop:grid laptop:grid-cols-2 mt-12">
             <div className="mt-8 flex flex-col gap-3 laptop:mb-14">
               <p
                 className={`${
